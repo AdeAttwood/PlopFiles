@@ -1,0 +1,13 @@
+{
+  "name": "@adeattwood/plop-files",
+  "description": "Plop templates for javascript, typescript and react.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "public": true,
+  "peerDependencies": {
+    "plop": "^3.1.0"
+  },
+  "devDependencies": {
+    "plop": "^3.1.0"
+  }
+}

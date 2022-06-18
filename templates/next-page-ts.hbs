@@ -1,0 +1,17 @@
+import React from "react";
+import Head from "next/head";
+
+import styles from "./{{name}}.module.scss"
+
+export default function Page() {
+  return (
+    <div className={styles.wrapper}>
+      <Head>
+        <title>{{name}}</title>
+      </Head>
+      <div className={styles.card}>
+        <h1>{{pascalCase name}}</h1>
+      </div>
+    </div>
+  );
+}

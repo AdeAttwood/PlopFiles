@@ -1,0 +1,29 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const {{pascalCase name}}Context = React.createContext()
+export const {{pascalCase name}}Consumer = {{pascalCase name}}Context.Consumer;
+
+export const {{pascalCase name}}Provider = ({children}) => {
+    const [state, setState] = React.useState({});
+
+    const value = [state, setState];
+    return (
+        <{{pascalCase name}}Context.Provider value={value}>
+            {children}
+        </{{pascalCase name}}Context.Provider>
+    );
+}
+
+{{pascalCase name}}Provider.propTypes = {};
+
+export const use{{pascalCase name}} = () => {
+    const context = React.useContext({{pascalCase name}}Context);
+    if (context === undefined) {
+        throw new Error('use{{pascalCase name}} has not been called inside a {{pascalCase name}}Provider')
+    }
+
+    return context
+}
+
+export default {{pascalCase name}}Provider
